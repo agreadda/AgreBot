@@ -21,145 +21,146 @@ aVtest
 p11
 aVagrebot timeout me
 p12
-asS'_inputStack'
+aVagrebot timout ranger_rolin
 p13
-(lp14
-sS'_outputHistory'
-p15
-(lp16
-S''
-p17
-ag17
-ag17
-ag17
-ag17
-ag17
-ag17
-ag17
-assS'ed1326f100eb45cb5633644190ca3655b17239917956a7ef59f3a23dd5cd9683'
-p18
-(dp19
-Vlast
-p20
-V   
-p21
-sVthird
-p22
-Vis   
-p23
-sS'_inputStack'
-p24
-(lp25
-sVtop
-p26
-Vis 
-p27
-sVseventh
-p28
-V   
-p29
-sVgreeting
-p30
-VGood afternoon
-p31
-sVit
-p32
-Vjoking
-p33
-sVtopic
-p34
-g33
-sS'_inputHistory'
-p35
-(lp36
-Vburp
-p37
-aVcan I burp
-p38
-aVdo you work in sales
-p39
-aVIS IT 00 50 AM RIGHT NOW IN GERMANY
-p40
-aVelectricity costs
-p41
-aVjoke
-p42
-aVis he joking
-p43
-aVaquarius
-p44
-aVagrebot can you timeout ranger_rolin
-p45
-aVtest
-p46
-asVgreetings
-p47
-Vtrue
-p48
-sVfourth
-p49
-V   
-p50
-sVsixth
-p51
-V   
-p52
-sS'_outputHistory'
-p53
-(lp54
-VYou are excused.
-p55
-aVInteresting. I want to find out more about you.
-p56
-aVI am working right now.
-p57
-aVWhat would it mean to you if it were?
-p58
-aVAre you experiencing an energy shortage?
-p59
-aVWhat do you get when you cross music and an automobile?
-p60
-aVDo you think I should know if it is?
-p61
-aVA lot of people on here are Aquarius.
-p62
-ag17
-ag17
-asVsign
-p63
-VAquarius
-p64
-sVfifth
-p65
-V   
-p66
-sVsecond
-p67
-Vis  
-p68
-ssS'4d34f718e4d93ba2bdd94ac631ce397d150df886af4b31163e0cb6446e4eac28'
-p69
-(dp70
-S'_inputHistory'
-p71
-(lp72
-VWhat can I call you
-p73
 asS'_inputStack'
-p74
-(lp75
+p14
+(lp15
 sS'_outputHistory'
-p76
-(lp77
-g17
+p16
+(lp17
+S''
+p18
+ag18
+ag18
+ag18
+ag18
+ag18
+ag18
+ag18
+ag18
+assS'ed1326f100eb45cb5633644190ca3655b17239917956a7ef59f3a23dd5cd9683'
+p19
+(dp20
+Vlast
+p21
+V   
+p22
+sVthird
+p23
+Vis   
+p24
+sS'_inputStack'
+p25
+(lp26
+sVtop
+p27
+Vis 
+p28
+sVseventh
+p29
+V   
+p30
+sVgreeting
+p31
+VGood afternoon
+p32
+sVit
+p33
+Vjoking
+p34
+sVtopic
+p35
+g34
+sS'_inputHistory'
+p36
+(lp37
+Vburp
+p38
+aVcan I burp
+p39
+aVdo you work in sales
+p40
+aVIS IT 00 50 AM RIGHT NOW IN GERMANY
+p41
+aVelectricity costs
+p42
+aVjoke
+p43
+aVis he joking
+p44
+aVaquarius
+p45
+aVagrebot can you timeout ranger_rolin
+p46
+aVtest
+p47
+asVgreetings
+p48
+Vtrue
+p49
+sVfourth
+p50
+V   
+p51
+sVsixth
+p52
+V   
+p53
+sS'_outputHistory'
+p54
+(lp55
+VYou are excused.
+p56
+aVInteresting. I want to find out more about you.
+p57
+aVI am working right now.
+p58
+aVWhat would it mean to you if it were?
+p59
+aVAre you experiencing an energy shortage?
+p60
+aVWhat do you get when you cross music and an automobile?
+p61
+aVDo you think I should know if it is?
+p62
+aVA lot of people on here are Aquarius.
+p63
+ag18
+ag18
+asVsign
+p64
+VAquarius
+p65
+sVfifth
+p66
+V   
+p67
+sVsecond
+p68
+Vis  
+p69
+ssS'4d34f718e4d93ba2bdd94ac631ce397d150df886af4b31163e0cb6446e4eac28'
+p70
+(dp71
+S'_inputHistory'
+p72
+(lp73
+VWhat can I call you
+p74
+asS'_inputStack'
+p75
+(lp76
+sS'_outputHistory'
+p77
+(lp78
+g18
 assS'_global'
-p78
-(dp79
-g35
-(lp80
+p79
+(dp80
+g36
+(lp81
 Vhi
-p81
-aVhi
 p82
 aVhi
 p83
@@ -177,13 +178,13 @@ aVhi
 p89
 aVhi
 p90
-asg24
-(lp91
-sg53
+aVhi
+p91
+asg25
 (lp92
+sg54
+(lp93
 VWell, hello!
-p93
-aVWell, hello!
 p94
 aVWell, hello!
 p95
@@ -201,22 +202,24 @@ aVWell, hello!
 p101
 aVWell, hello!
 p102
-assS'233e79a0a7a33ad287679458c0124000f02d6146eb53a1f2c37e120ee85f75a6'
+aVWell, hello!
 p103
-(dp104
+assS'233e79a0a7a33ad287679458c0124000f02d6146eb53a1f2c37e120ee85f75a6'
+p104
+(dp105
 S'_inputHistory'
-p105
-(lp106
+p106
+(lp107
 VUnknown command
-p107
-aVUnknown command
 p108
-asS'_inputStack'
+aVUnknown command
 p109
-(lp110
+asS'_inputStack'
+p110
+(lp111
 sS'_outputHistory'
-p111
-(lp112
-g17
-ag17
+p112
+(lp113
+g18
+ag18
 ass.

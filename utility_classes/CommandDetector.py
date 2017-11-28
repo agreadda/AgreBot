@@ -1,5 +1,5 @@
 '''
-Created on Nov 27, 2017
+Created on Nov 18, 2017
 
 @author: zacha
 '''
@@ -22,7 +22,7 @@ class AgreBotCommands(object):
                                'agrebot.*? who are the mods.*?': '/mods',
                                'agrebot.*? shut down the stream': 'If I have to....' }
     
-    def executeCommand(self, incomingCommand):
+    def execute_command(self, incomingCommand):
         print  incomingCommand
         return incomingCommand
     
@@ -32,26 +32,26 @@ class AgreBotCommands(object):
         '''
     
     #first check if we should even process
-    def startsWithAgre(self, message):
+    def starts_with_agre(self, message):
         if(message.lower().startswith( 'agrebot' ) or message.lower().startswith( 'hey agrebot' )):
             return True
         return False
     
     #match against all regex commands that we find
-    def isCommand(self, message, user):
-        if(self.startsWithAgre(message)):
+    def is_command(self, message, user):
+        if(self.starts_with_agre(message)):
             for regex in self.__listOfCommands__.keys():
                 print regex
                 p = re.compile(regex)
                 if(p.match(message)):
-                    self.executeCommand(self.__listOfCommands__[regex])
-                    return {self.executeCommand(self.__listOfCommands__[regex]), self.executeCommand(self.__listOfCommandsResponses__[regex])} 
+                    self.execute_command(self.__listOfCommands__[regex])
+                    return {self.execute_command(self.__listOfCommands__[regex]), self.execute_command(self.__listOfCommandsResponses__[regex])} 
             if user.lower() in self.__listOfAdmins__:
                 for regex in self.__listOfAdminCommands__.keys():
                     print regex
                     p = re.compile(regex)
                     if(p.match(message)):
-                        self.executeCommand(self.__listOfAdminCommands__[regex])
-                        return { self.executeCommand(self.__listOfAdminCommands__[regex]), self.executeCommand(self.__listOfCommandsResponses__[regex]) } 
+                        self.execute_command(self.__listOfAdminCommands__[regex])
+                        return { self.execute_command(self.__listOfAdminCommands__[regex]), self.execute_command(self.__listOfCommandsResponses__[regex]) } 
         return 'No Command Found'
                 

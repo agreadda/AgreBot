@@ -1,5 +1,5 @@
 '''
-Created on Nov 24, 2017
+Created on Nov 14, 2017
 
 @author: zachary.a.ob@gmail.com
 '''
@@ -26,22 +26,24 @@ channel_name = "#agreadda"
 should_save_at = datetime.datetime.now() + datetime.timedelta(minutes = 1)
 
 # Method for creating a random session id
-def generateRandomSessionKey():
+def generate_random_session_key():
     rawdata = private_secret + str(time.time()) + string.join(map(chr, [random.randint(0,255) for x in range(100)]),"")
     session_key = hashlib.sha256(rawdata).hexdigest()
     del(rawdata)
     return session_key
 
-def Db_save():
+#TODO run every 5min to update current viewers loyalty points
+def db_save():
     print "Saving DB"
     db_conn.save_results()
-    db_conn.increase_viewer_points(channel_name)
+    #db_conn.increase_viewer_points(channel_name)
 
 # Method for sending a message
-def Send_message(message):
+def send_message(message):
     s.send("PRIVMSG "+ channel_name +" :" + message + "\r\n")
 
-def Save_sessions(kernel_to_save, chat_mates_to_save):
+#saves user sessions and aiml informational data (NOT BRAIN FILE)
+def save_sessions(kernel_to_save, chat_mates_to_save):
     try:
         print('writing session data')
         outfile = open(session_data, 'wb')
@@ -53,12 +55,13 @@ def Save_sessions(kernel_to_save, chat_mates_to_save):
     try:
         print('writing session dict')
         outfile = open(session_dict, 'wb')
-        pickle.dump(chat_mates_to_save._sessionDict, outfile)
+        pickle.dump(chat_mates_to_save._session_dict, outfile)
         outfile.close()
     except IOError as e:
         print(e.errno)
-        
-def Open_sessions(kernel_to_populate, chat_mates_to_save):
+      
+#Continue the previous session so that it remembers the users  
+def open_sessions(kernel_to_populate, chat_mates_to_save):
     try:
         print('pulling session data')
         infile = open(session_data, 'rb')
@@ -70,7 +73,7 @@ def Open_sessions(kernel_to_populate, chat_mates_to_save):
     try:
         print('pulling session dict')
         infile = open(session_dict, 'rb')
-        chat_mates_to_save._sessionDict = pickle.load(infile)
+        chat_mates_to_save._session_dict = pickle.load(infile)
         print('done pulling dict')
     except IOError as e:
         print(e.errno)
@@ -92,9 +95,9 @@ chat_users = SessionManager.Session()
 agre_bot_commands = CommandDetector.AgreBotCommands()
 db_conn = DbConn.AgreBotDbConnection(1)
 
-Open_sessions(kernel, chat_users)
+open_sessions(kernel, chat_users)
 print('after session load')
-print(chat_users._sessionDict)
+print(chat_users._session_dict)
 print(kernel._sessions)
 print('entering program')
 
@@ -110,7 +113,7 @@ while True:
     #if you haven't saved all entries, points, etc in the last 5min then save
     if(should_save_at.time() < datetime.datetime.now().time()):
         
-        Db_save()
+        db_save()
         should_save_at = should_save_at + datetime.timedelta(minutes = 5)
         
     #fetch the message from the stream
@@ -121,7 +124,7 @@ while True:
     #looping through all messages
     for line in temp:
         #print(line)
-        #print(chat_users._sessionDict)
+        #print(chat_users._session_dict)
         # Checks whether the message is PING because its a method of Twitch to check if you're afk
         if (line[0] == "PING"):
             s.send("PONG %s\r\n" % line[1])
@@ -142,25 +145,25 @@ while True:
                 
                 # Only works after twitch is done announcing stuff (MODT = Message of the day)
                 if MODT:
-                    print(chat_users._sessionDict)
+                    print(chat_users._session_dict)
                     #kernel.respond("hi")
-                    if not username in chat_users._sessionDict.keys():
-                        chat_users._sessionDict[username] = generateRandomSessionKey()
-                    wasCommand = agre_bot_commands.isCommand(message, username)
+                    if not username in chat_users._session_dict.keys():
+                        chat_users._session_dict[username] = generate_random_session_key()
+                    wasCommand = agre_bot_commands.is_command(message, username)
                     print wasCommand
                     if('No Command Found' not in wasCommand):
                         print "executing command"
                         for key in wasCommand:
-                            Send_message(key)
+                            send_message(key)
                     else:
-                        Send_message(kernel.respond(message, chat_users._sessionDict[username]))
+                        send_message(kernel.respond(message, chat_users._session_dict[username]))
                     print(username + ": " + message)
                     #print(kernel._sessions)
-                    Save_sessions(kernel, chat_users)
+                    save_sessions(kernel, chat_users)
                     
                     # You can add all your plain commands here
                     #if message == "Hey":
-                    #    Send_message("Welcome to my stream, " + username)
+                    #    send_message("Welcome to my stream, " + username)
 
                 for l in parts:
                     if "End of /NAMES list" in l:

@@ -39,12 +39,15 @@ class AgreBotDbConnection(object):
              (id integer primary key autoincrement, username text, timeinchat integer, points integer, active integer, role text)''')
         #'''create table entries (id integer primary key autoincrement, username text, timeinchat integer, points integer, active integer, role text)'''
     
+    #cleanup sqlite connection
     def close_connection(self):
         self.conn.close()
         
+    #placeholder
     def save_results(self):
         return
-        
+    
+    #Increase current viewers points by the points per minute
     def increase_viewer_points(self, channel_name):
         #API call to get current viewers
         response = requests.get("https://tmi.twitch.tv/group/user/" + channel_name + "/chatters")

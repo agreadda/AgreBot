@@ -13,5 +13,5 @@ class Session(object):
         '''
         Constructor
         '''
-        self._sessionDict = {}
+        self._session_dict = {}
         
