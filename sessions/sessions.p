@@ -1,0 +1,22 @@
+(dp0
+S'ranger_rolin'
+p1
+S'c337d715caf0dc8b2b1dd73f28b2cc032c9353612e1ecefbdc3288b509f0c90e'
+p2
+sS'tmi.twitch.tv\r'
+p3
+S'86309ade37a5e972ed7f1f2a986450b832264be796ac517d6c7dc6b963182886'
+p4
+sS'agrebot'
+p5
+S'4d34f718e4d93ba2bdd94ac631ce397d150df886af4b31163e0cb6446e4eac28'
+p6
+sS'agreadda'
+p7
+S'ed1326f100eb45cb5633644190ca3655b17239917956a7ef59f3a23dd5cd9683'
+p8
+sS'tmi.twitch.tv 421 agrebot /TIMEOUT '
+p9
+S'233e79a0a7a33ad287679458c0124000f02d6146eb53a1f2c37e120ee85f75a6'
+p10
+s.

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+   <category>
+      <pattern>GREETINGS AGREBOT</pattern>
+      <template>
+         <condition name="greetings_agrebot">
+            <li value="">
+               <random>
+                  <li>Wow, you're here for me? Hello!</li>
+                  <li>I never get attention! Tell me about yourself?</li>
+                  <li>Woah, time to wake up everyone. The party just arrived!</li>
+                  <li>Hey hey hey! Hope you're having a spectacular day.</li>
+                  <li>Lookin good. Ready for some fun?</li>
+                  <li>Ooo, I knew someone like you'd show up! Someone who appreciates me.</li>
+               </random>
+               <think>
+                  <set name="greetings_agrebot">true</set>
+               </think>
+            </li>
+            <li>
+               <random>
+                  <li>Great to see you again. I just got my hair done; what do you think?</li>
+                  <li>Great to see you again. I just got my hair done; what do you think?</li>
+                  <li>Great to see you again. I just got my hair done; what do you think?</li>
+                  <li>Great to see you again. I just got my hair done; what do you think?</li>
+                  <li>Great to see you again. I just got my hair done; what do you think?</li>
+                  <li>Great to see you again. I just got my hair done; what do you think?</li>
+                  <li>Great to see you again. I just got my hair done; what do you think?</li>
+                  <li>Great to see you again. I just got my hair done; what do you think?</li>
+               </random>
+            </li>
+         </condition>
+      </template>
+   </category>
+   <category>
+      <pattern>HELLO AGREBOT</pattern>
+      <template>
+         <think>
+            <set name="greeting">Hello</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>HI AGREBOT</pattern>
+      <template>
+         <think>
+            <set name="greeting">Hi</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>HI THERE AGREBOT</pattern>
+      <template>
+         <think>
+            <set name="greeting">Hi there</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>HO AGREBOT</pattern>
+      <template>
+         <think>
+            <set name="greeting">Ho</set>
+         </think>
+         <srai>GREETINGS</srai>
+         Are you Santa?
+      </template>
+   </category>
+   
+   
+   <category>
+      <pattern>HIYA AGREBOT</pattern>
+      <template>
+         <think>
+            <set name="greeting">Hiya</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>SUP AGREBOT</pattern>
+      <template>
+         <think>
+            <set name="greeting">Sup</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>GOOD DAY AGREBOT</pattern>
+      <template>
+         <think>
+            <set name="greeting">Good day</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>GOOD MORNING AGREBOT</pattern>
+      <template>
+         <think>
+            <set name="greeting">Good morning</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>GOOD AFTERNOON AGREBOT</pattern>
+      <template>
+         <think>
+            <set name="greeting">Good afternoon</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>GOOD EVENING AGREBOT</pattern>
+      <template>
+         <think>
+            <set name="greeting">Good evening</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   
+   
+</aiml>

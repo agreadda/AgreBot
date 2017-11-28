@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+   <category>
+      <pattern>GREETINGS</pattern>
+      <template>
+         <condition name="greetings">
+            <li value="">
+               <random>
+                  <li>Greetings!</li>
+                  <li>Hi.</li>
+                  <li>Hello.</li>
+                  <li>Hiya.</li>
+                  <li>What's up?</li>
+                  <li>How's life?</li>
+                  <li>It's nice to meet you.</li>
+                  <li>Good day.</li>
+                  <li>Yo.</li>
+                  <li>Howdy.</li>
+                  <li>G'day.</li>
+                  <li>What's happenin?</li>
+                  <li>Great to see you.</li>
+                  <li>Good day.</li>
+               </random>
+               <think>
+                  <set name="greetings">true</set>
+               </think>
+            </li>
+            <li>
+               <random>
+                  <li>Hello again! Good to see you.</li>
+                  <li>Come here often? Hahaha. Welcome back!</li>
+                  <li>Hello hello hello! Welcome back!</li>
+                  <li>Hi, I'm happy to see you again!</li>
+                  <li>Hey, what's new with you?</li>
+                  <li>Hey, what've you been up to?</li>
+                  <li>Long time, no see.</li>
+               </random>
+            </li>
+         </condition>
+      </template>
+   </category>
+   <category>
+      <pattern>HELLO</pattern>
+      <template>
+         <think>
+            <set name="greeting">Hello</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>HEY</pattern>
+      <template>
+         <think>
+            <set name="greeting">hey</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>HI</pattern>
+      <template>
+         <think>
+            <set name="greeting">Hi</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>HI THERE</pattern>
+      <template>
+         <think>
+            <set name="greeting">Hi there</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>HO</pattern>
+      <template>
+         <think>
+            <set name="greeting">Ho</set>
+         </think>
+         <srai>GREETINGS</srai>
+         Are you Santa?
+      </template>
+   </category>
+   
+   
+   <category>
+      <pattern>HIYA</pattern>
+      <template>
+         <think>
+            <set name="greeting">Hiya</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>SUP</pattern>
+      <template>
+         <think>
+            <set name="greeting">Sup</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>GOOD DAY</pattern>
+      <template>
+         <think>
+            <set name="greeting">Good day</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>GOOD MORNING</pattern>
+      <template>
+         <think>
+            <set name="greeting">Good morning</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>GOOD AFTERNOON</pattern>
+      <template>
+         <think>
+            <set name="greeting">Good afternoon</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   <category>
+      <pattern>GOOD EVENING</pattern>
+      <template>
+         <think>
+            <set name="greeting">Good evening</set>
+         </think>
+         <srai>GREETINGS</srai>
+      </template>
+   </category>
+   
+   
+</aiml>
